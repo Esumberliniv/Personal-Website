@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emery Sumberlin IV - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h2 class="logo"><span>E</span>mery</h2>
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="Sumberlin_resume.pdf" target="_blank">Resume</a>
+            </nav>
+            <div class="header-social-icons">
+                <a href="https://www.linkedin.com/in/emeryiv" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/Im3mery" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="container home-content">
+            <div class="text-content">
+                <h2>Hello, I'm <span>Emery Sumberlin IV</span></h2>
+                <h4>About me</h4>
+                <p>Rising Junior in Cybersecurity with progressive experience writing code and designing solutions. Seeking a challenging role as a Software Engineering Intern or Product Management intern. Adept at working effectively in fast-paced, deadline-driven settings that demand strong organizational and analytical skills.</p>
+                <div class="btn-group">
+                    <div class="connect-dropdown">
+                        <a href="#" class="connect-btn">Connect</a>
+                        <div class="dropdown-content">
+                            <p><i class="fas fa-envelope"></i> emerydsumberlin@yahoo.com</p>
+                            <p><i class="fas fa-phone"></i> 817-917-7382</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="newheadshot2.jpg" alt="Emery Sumberlin IV">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>More <span> About Me</span></h2>
+                <div class="bio-content">
+                    <div class="bio-section">
+                        <h3>Background</h3>
+                        <p>Hello! I'm <span class="highlight"></span> a passionate cybersecurity major and sophomore at Clark Atlanta University, where I'm proud to maintain a 3.83 GPA as a member of the Isabella T. Jenkins Honors Program. My academic journey is driven by a commitment to excellence and a desire to innovate in the fields of data analytics, technology, and environmental justice.</p>
+                    </div>
+                    
+                    <div class="bio-section">
+                        <h3>Technical Skills</h3>
+                        <p>Originally from Dallas, Texas, I bring a blend of Southern charm and tech-savvy enthusiasm to everything I do. My technical expertise includes Java, Python, JavaScript, CSS, and HTML, as well as frameworks like ReactJS, NodeJS, and React Native.</p>
+                    </div>
+
+                    <div class="bio-section">
+                        <h3>Projects & Experience</h3>
+                        <p>I've worked on various exciting projects, including:</p>
+                        <ul class="projects-list">
+                            <li>Building a personal portfolio website(This website!)</li>
+                            <li>Creating an interactive university app</li>
+                            <li>Designing a video game</li>
+                            <li>Developing a tailored English learning program</li>
+                        </ul>
+                        <p>As a Product Management Intern at AT&T, I was able to get an in-depth experience in managing cross-functional teams, strategizing product roadmaps, and leveraging customer insights to drive impactful solutions. I also participated in their Innovation Challenge, where my team became finalists by designing a smart assistant kiosk powered by AI for a personalized customer experience. I spearheaded the UI/UX prototype design and collaborated with my team to bring our vision to life.
+
+                    <div class="bio-section">
+                        <h3>Impact & Interests</h3>
+                        <p>Beyond academics and internships, I'm deeply committed to making an impact. As an ambassador and fellow at the Sharing the Power Foundation, I work to raise awareness about environmental justice, combining technology with advocacy.</p>
+                        <p>In my free time, I enjoy playing basketball, immersing myself in video games, and constantly exploring new ways to challenge and improve myself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.connect-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            this.nextElementSibling.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(e) {
+            if (!e.target.matches('.connect-btn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
